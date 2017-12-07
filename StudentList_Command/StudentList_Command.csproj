@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\Student.cs" />
+    <Compile Include="ViewModel\StudentAddCommand.cs" />
     <Compile Include="ViewModel\StudentsViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -1,12 +1,14 @@
 ﻿<Window x:Class="StudentList_Command.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StudentList_Command"
         Title="StudenList_Binding" Height="300" Width="500">
     <Grid>
-        <ListBox ItemsSource="{Binding Students}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding Students}" Grid.Row="0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -18,5 +20,12 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <StackPanel DataContext="{Binding newStudent}" Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Text="Új hallgató adatai:" Margin="5"/>
+            <TextBox Text="{Binding FirstName}" Width="100" Margin="5"/>
+            <TextBox Text="{Binding LastName}" Width="100" Margin="5"/>
+            <TextBox Text="{Binding StudentCode}" Width="100" Margin="5"/>
+        </StackPanel>
+        <Button Name="_ButtonAddStudent" Content="Add student" Command="{Binding AddCommand}" Margin="5" Grid.Row="2"/>
     </Grid>
 </Window>
