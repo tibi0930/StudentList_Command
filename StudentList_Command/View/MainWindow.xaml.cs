@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using StudentList_Command.ViewModel;
 
-namespace StudentList_Command
+namespace StudentList_Command.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
