@@ -1,7 +1,7 @@
 ﻿<Window x:Class="StudentList_Command.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="StudenList_Binding" Height="300" Width="500">
+        Title="StudenList Command" Height="300" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -20,7 +20,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <StackPanel DataContext="{Binding newStudent}" Orientation="Horizontal" Grid.Row="1">
+        <StackPanel DataContext="{Binding NewStudent}" Orientation="Horizontal" Grid.Row="1">
             <TextBlock Text="Új hallgató adatai:" Margin="5"/>
             <TextBox Text="{Binding FirstName}" Width="100" Margin="5"/>
             <TextBox Text="{Binding LastName}" Width="100" Margin="5"/>

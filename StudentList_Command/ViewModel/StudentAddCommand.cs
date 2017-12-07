@@ -19,7 +19,7 @@ namespace StudentList_Command.ViewModel
             return true;
         }
 
-        public void Execute(object parameter)
+        public void Execute(Object parameter)
         {
             _viewModel.AddNewStudent();
         }

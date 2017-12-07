@@ -9,7 +9,7 @@ namespace StudentList_Command.ViewModel
     {
         public ObservableCollection<Student> Students { get; set; }
 
-        public Student newStudent { get; private set; }
+        public Student NewStudent { get; private set; }
 
         public StudentAddCommand AddCommand { get; private set; }
 
@@ -18,7 +18,7 @@ namespace StudentList_Command.ViewModel
         public StudentsViewModel()
         {
             Students = new ObservableCollection<Student>();
-            newStudent = new Student();
+            NewStudent = new Student();
             AddCommand = new StudentAddCommand(this); // parancs létrehozása
 
             Students.Add(new Student { Id = 1, LastName = "Kis", FirstName = "János", StudentCode = "KIJSAAI" });
@@ -30,8 +30,8 @@ namespace StudentList_Command.ViewModel
 
         public void AddNewStudent()
         {
-            Students.Add(newStudent);
-            newStudent = new Student();
+            Students.Add(NewStudent);
+            NewStudent = new Student();
             OnPropertyChanged("newStudent");
         }
 
